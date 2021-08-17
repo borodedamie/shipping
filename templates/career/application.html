@@ -1,0 +1,290 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="preloader"> <img src="/static/images/preloader.png" alt="Image"> </div>
+<!-- end preloader -->
+<div class="page-transition"></div>
+<!-- end page-transition -->
+<aside class="side-widget">
+  <div class="inner">
+    <div class="logo"> <a href="/"><img src="/static/images/logo.png" srcset="images/logo@2x.png" alt="Image"></a> </div>
+    <!-- end logo -->
+    <div class="hide-mobile">
+      <p>Take the complexity out of customs Freight Solutions with customs brokerage services</p>
+      <figure class="gallery"><a href="/static/images/recent-news01.jpg" data-fancybox><img src="/static/images/recent-news01.jpg" alt="Image"></a><a href="/static/images/recent-news02.jpg" data-fancybox><img src="/static/images/recent-news02.jpg" alt="Image"></a></figure>
+      <h6 class="widget-title">CONTACT INFO</h6>
+      <address class="address">
+      <p>+1 (850) 344 0 66<br>
+        <a href="#">sales@qesco.co.uk</a></p>
+      </address>
+      <h6 class="widget-title">FOLLOW US</h6>
+      <ul class="social-media">
+        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+        <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
+        <li><a href="#"><i class="lni lni-instagram"></i></a></li>
+        <li><a href="#"><i class="lni lni-youtube"></i></a></li>
+        <li><a href="#"><i class="lni lni-pinterest"></i></a></li>
+      </ul>
+    </div>
+    <!-- end hide-mobile -->
+    <div class="show-mobile">
+      <div class="custom-menu">
+        <ul>
+          <li><a href="/">En</a></li>
+          <li><a href="#">Ru</a></li>
+        </ul>
+      </div>
+      <!-- end custom-menu -->
+      <div class="site-menu">
+        <ul>
+          <li><a href="/logistics">Logistics</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- end site-menu --> 
+    </div>
+    <!-- end show-mobile --> 
+    <small>© 2020 Shipbite | Logicstic Shipping Company</small> </div>
+  <!-- end inner --> 
+</aside>
+<!-- end side-widget -->
+<div class="topbar">
+  <div class="container">
+    <div class="phone">Call Us Now: <a href="#"> +1 (850) 344 0 66 </a></div>
+    <!-- end phone -->
+    <div class="email"> Email: <a href="#">sales@qesco.co.uk</a> </div>
+    <!-- end email -->
+    <div class="social-media"> <span>Follow us</span>
+      <ul>
+        <li><a href="#"><i class="lni lni-facebook-filled"></i> <span>Facebook</span></a></li>
+        <li><a href="#"><i class="lni lni-twitter-original"></i> <span>Twitter</span></a></li>
+        <li><a href="#"><i class="lni lni-linkedin-original"></i> <span>Linkedin</span></a></li>
+      </ul>
+    </div>
+	  <!-- end social-media -->
+  </div>
+  <!-- end container --> 
+</div>
+<!-- end topbar -->
+<nav class="navbar">
+  <div class="container">
+    <div class="inner">
+      <div class="logo"> <a href="/"> <img src="/static/images/logo.png" srcset="images/logo@2x.png" alt="Image"> </a> </div>
+      <!-- end logo -->
+      <div class="custom-menu">
+        <ul>
+          <li><a href="/">En</a></li>
+          <li><a href="#">Ru</a></li>
+        </ul>
+      </div>
+      <!-- end custom-menu -->
+      <div class="site-menu">
+        <ul>
+          <li><a href="/logistics">Logistics</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- end site-menu -->
+      <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
+      <!-- end hamburger-menu -->
+      <div class="navbar-button"> <a href="#">GET A QUOTE</a> </div>
+      <!-- end navbar-button --> 
+    </div>
+    <!-- end inner --> 
+  </div>
+  <!-- end container --> 
+</nav>
+<!-- end navbar -->
+<header class="page-header" data-background="/static/images/slide01.jpg">
+  <div class="container">
+    <h1>Careers</h1>
+    <p>At Shipbite, you'll be empowered to be productive, you'll be given freedom, <br> and your ideas will matter.</p>
+  </div>
+  <!-- end container --> 
+</header>
+<!-- end page-header -->
+<section class="content-section">
+  <div class="container">
+    <div class="content">
+        <h3><a href="#">Job Application Form </a></h3>
+        <br>
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+            <div class="col-12">
+                <div class="calculator">
+                  <div class="row inner">
+                    <div class="form-group col-md-6"> <span>First Name</span>
+                        <input type="text" name="first_name">
+                      </div>
+                      <div class="form-group col-md-6"> <span>Last Name</span>
+                        <input type="text" name="last_name">
+                      </div>
+                      <div class="form-group col-md-6"> <span>Other Names</span>
+                        <input type="text" name="other_names">
+                      </div>
+                      <div class="form-group col-md-6"> <span>Email</span>
+                        <input type="text" name="email">
+                      </div>
+                      <div class="form-group col-md-12"> <span>Address</span>
+                        <input type="text" name="address">
+                      </div>
+                      <div class="form-group col-md-6"> <span>State</span>
+                        <select name="state">
+                          <option>Please select</option>
+                          <option value='AL'>Alabama</option>
+                          <option value='AK'>Alaska</option>
+                          <option value='AZ'>Arizona</option>
+                          <option value='AR'>Arkansas</option>
+                          <option value='CA'>California</option>
+
+                          <option value='CO'>Colorado</option>
+                          <option value='CT'>Connecticut</option>
+                          <option value='DE'>Delaware</option>
+                          <option value='DC'>District of Columbia</option>
+                          <option value='FL'>Florida</option>
+
+                          <option value='GA'>Georgia</option>
+                          <option value='HI'>Hawaii</option>
+                          <option value='ID'>Idaho</option>
+                          <option value='IL'>Illinois</option>
+                          <option value='IN'>Indiana</option>
+
+                          <option value='IA'>Iowa</option>
+                          <option value='KS'>Kansas</option>
+                          <option value='KY'>Kentucky</option>
+                          <option value='LA'>Louisiana</option>
+                          <option value='ME'>Maine</option>
+
+                          <option value='MD'>Maryland</option>
+                          <option value='MA'>Massachusetts</option>
+                          <option value='MI'>Michigan</option>
+                          <option value='MN'>Minnesota</option>
+                          <option value='MS'>Mississippi</option>
+
+                          <option value='MO'>Missouri</option>
+                          <option value='MT'>Montana</option>
+                          <option value='NE'>Nebraska</option>
+                          <option value='NV'>Nevada</option>
+                          <option value='NH'>New Hampshire</option>
+
+                          <option value='NJ'>New Jersey</option>
+                          <option value='NM'>New Mexico</option>
+                          <option value='NY'>New York</option>
+                          <option value='NC'>North Carolina</option>
+                          <option value='ND'>North Dakota</option>
+
+                          <option value='OH'>Ohio</option>
+                          <option value='OK'>Oklahoma</option>
+                          <option value='OR'>Oregon</option>
+                          <option value='PA'>Pennsylvania</option>
+                          <option value='RI'>Rhode Island</option>
+
+                          <option value='SC'>South Carolina</option>
+                          <option value='SD'>South Dakota</option>
+                          <option value='TN'>Tennessee</option>
+                          <option value='TX'>Texas</option>
+                          <option value='UT'>Utah</option>
+
+                          <option value='VT'>Vermont</option>
+                          <option value='VA'>Virginia</option>
+                          <option value='WA'>Washington</option>
+                          <option value='WV'>West Virginia</option>
+                          <option value='WI'>Wisconsin</option>
+
+                          <option value='WY'>Wyoming</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6"> <span>City</span>
+                        <input type="text" name="city">
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6"> <span>Phone Number</span>
+                        <input type="text" name="phone_no">
+                      </div>
+                      <div class="form-group col-md-6"> <span>Social Security No. (SSN)</span>
+                        <input type="text" name="ssn">
+                      </div>
+                      <div class="form-group col-md-6"> <span>Position Applied For</span>
+                        <input type="text" name="position">
+                      </div>
+                      <div class="form-group col-md-12"> <span>Upload Resume & ID (Submit both Front & Back)</span>
+                        <input type="file" id="formFileMultiple" name="files" multiple>
+                      </div>
+                      <div class="form-group col-md-12"> <span>Reference</span>
+                        <input type="text" name="reference">
+                      </div>
+                      <div class="form-group col-12">
+                        <button class="estimated-price" type="submit">Submit Application</button>
+                        <!-- end estimated-price --> 
+                      </div>
+                    <!-- end form-group --> 
+                  </div>
+                  <!-- end row inner --> 
+                </div>
+                <!-- end calculator --> 
+              </div>
+              <!-- end col-12 --> 
+        </form>
+    </div>
+  </div>
+  <!-- end container --> 
+</section>
+<!-- end content-section -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <figure class="logo"> <img src="/static/images/logo.png" srcset="images/logo@2x.png" alt="Image"> </figure>
+        <p>+1 (850) 344 0 66<br>
+          <a href="#">sales@qesco.co.uk</a></p>
+        <p>2075 Brandon Trail Alpharetta, <br>
+          London - UK</p>
+      </div>
+      <!-- end col-4 -->
+      <div class="col-lg-4 col-md-6">
+        <h6 class="widget-title">Quick Links</h6>
+        <ul class="footer-menu">
+          <li><a href="#">Air Freight</a></li>
+          <li><a href="#">Sea Freight</a></li>
+          <li><a href="#">Ground Cargo</a></li>
+          <li><a href="#">Packaging Options</a></li>
+          <li><a href="#">Track Your Shipment</a></li>
+        </ul>
+      </div>
+      <!-- end col-4 -->
+      <div class="col-lg-4">
+        <h6 class="widget-title">Subscribe Newsletter</h6>
+        <form>
+          <input type="email" placeholder="enter your email address....">
+          <input type="submit" value="Subscribe">
+        </form>
+      </div>
+      <!-- end col-4 -->
+      <div class="col-12">
+        <div class="footer-bottom"> <span>© 2020 Shipbite | Logicstic Shipping Company</span> <span>Site created by <a href="#">Themezinho</a></span> </div>
+        <!-- end footer-bottom --> 
+      </div>
+      <!-- end col-12 --> 
+    </div>
+    <!-- end row --> 
+  </div>
+  <!-- end container --> 
+</footer>
+<!-- end footer --> 
+
+<!-- JS FILES --> 
+<script src="/static/js/jquery.min.js"></script> 
+<script src="/static/js/bootstrap.min.js"></script> 
+<script src="/static/js/fancybox.min.js"></script> 
+<script src="/static/js/swiper.min.js"></script> 
+<script src="/static/js/odometer.min.js"></script> 
+<script src="/static/js/imagesloaded.pkgd.min.js"></script> 
+<script src="/static/js/isotope.min.js"></script> 
+<script src="/static/js/scripts.js"></script>
+
+{% endblock content %}

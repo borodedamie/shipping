@@ -1,13 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.utils import secure_filename
 import model
+# import urllib.request
 import os
 
 UPLOAD_FOLDER = '/mnt/c/Users/PC/Desktop/Shipping/static/images/upload'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {'doc', 'docx', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
+app.secret_key = "aswdqwe232343refeerheretti"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -27,11 +30,16 @@ def submit_application():
         ssn = request.form['ssn']
         position = request.form['position']
         reference = request.form['reference']
-        if request.files:
-            
-            files = request.files['files']
-            files.save(os.path.join(app.config['UPLOAD_FOLDER'], files.filename))
-            
+        
+        if 'files[]' not in request.files:
+            return 'no file found'
+        
+        files = request.files.getlist('files[]')
+        for file in files:
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
         # model.save_application_to_db(first_name, last_name, other_names, email, address, state, city, phone_no, ssn, position, files, reference)
         
         return 'something happened at least.'

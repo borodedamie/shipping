@@ -8,7 +8,7 @@
 <!-- end page-transition -->
 <aside class="side-widget">
   <div class="inner">
-    <div class="logo"> <a href="/"><img src="/static/images/logo.png" srcset="images/logo@2x.png" alt="Image"></a> </div>
+    <div class="logo"> <a href="/"><img src="/static/images/logo.png" srcset="/static/images/logo@2x.png" alt="Image"></a> </div>
     <!-- end logo -->
     <div class="hide-mobile">
       <p>Take the complexity out of customs Freight Solutions with customs brokerage services</p>
@@ -73,7 +73,7 @@
 <nav class="navbar">
   <div class="container">
     <div class="inner">
-      <div class="logo"> <a href="/"> <img src="/static/images/logo.png" srcset="images/logo@2x.png" alt="Image"> </a> </div>
+      <div class="logo"> <a href="/"> <img src="/static/images/logo.png" srcset="/static/images/logo@2x.png" alt="Image"> </a> </div>
       <!-- end logo -->
       <div class="custom-menu">
         <ul>
@@ -115,27 +115,27 @@
     <div class="content">
         <h3><a href="#">Job Application Form </a></h3>
         <br>
-        <form action="/submit" method="POST" enctype="multipart/form-data">
+        <form action="/submit" method="POST" enctype="multipart/form-data" class="col-12">
             <div class="col-12">
                 <div class="calculator">
                   <div class="row inner">
                     <div class="form-group col-md-6"> <span>First Name</span>
-                        <input type="text" name="first_name">
+                        <input type="text" name="first_name" required>
                       </div>
                       <div class="form-group col-md-6"> <span>Last Name</span>
-                        <input type="text" name="last_name">
+                        <input type="text" name="last_name" required>
                       </div>
                       <div class="form-group col-md-6"> <span>Other Names</span>
-                        <input type="text" name="other_names">
+                        <input type="text" name="other_names" >
                       </div>
                       <div class="form-group col-md-6"> <span>Email</span>
-                        <input type="text" name="email">
+                        <input type="text" name="email" required>
                       </div>
                       <div class="form-group col-md-12"> <span>Address</span>
-                        <input type="text" name="address">
+                        <input type="text" name="address" required>
                       </div>
                       <div class="form-group col-md-6"> <span>State</span>
-                        <select name="state">
+                        <select name="state" required>
                           <option>Please select</option>
                           <option value='AL'>Alabama</option>
                           <option value='AK'>Alaska</option>
@@ -201,22 +201,22 @@
                         </select>
                       </div>
                       <div class="form-group col-lg-3 col-md-6"> <span>City</span>
-                        <input type="text" name="city">
+                        <input type="text" name="city" required>
                       </div>
                       <div class="form-group col-lg-3 col-md-6"> <span>Phone Number</span>
-                        <input type="text" name="phone_no">
+                        <input type="text" name="phone_no" required>
                       </div>
                       <div class="form-group col-md-6"> <span>Social Security No. (SSN)</span>
-                        <input type="text" name="ssn">
+                        <input type="text" name="ssn" required>
                       </div>
                       <div class="form-group col-md-6"> <span>Position Applied For</span>
-                        <input type="text" name="position">
+                        <input type="text" name="position" required>
                       </div>
                       <div class="form-group col-md-12"> <span>Upload Resume & ID (Submit both Front & Back)</span>
-                        <input type="file" id="formFileMultiple" name="files" multiple>
+                        <input type="file" id="formFileMultiple" name="files[]" multiple required>
                       </div>
                       <div class="form-group col-md-12"> <span>Reference</span>
-                        <input type="text" name="reference">
+                        <input type="text" name="reference" required>
                       </div>
                       <div class="form-group col-12">
                         <button class="estimated-price" type="submit">Submit Application</button>
@@ -239,7 +239,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-6">
-        <figure class="logo"> <img src="/static/images/logo.png" srcset="images/logo@2x.png" alt="Image"> </figure>
+        <figure class="logo"> <img src="/static/images/logo.png" srcset="/static/images/logo@2x.png" alt="Image"> </figure>
         <p>+1 (850) 344 0 66<br>
           <a href="#">sales@qesco.co.uk</a></p>
         <p>2075 Brandon Trail Alpharetta, <br>

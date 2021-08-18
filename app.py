@@ -34,8 +34,11 @@ def submit_application():
         if 'files[]' not in request.files:
             return 'no file found'
         
-        files = request.files.getlist('files[]')
+        images = request.files.getlist('files[]')
         for file in files:
+            if file.filename == " ":
+                print("file must have a name.")
+                return redirect(request.url)
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))

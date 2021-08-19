@@ -81,6 +81,26 @@ def logistics():
 def services():
     return render_template("services.html")
 
+@app.route('/search', methods = ['GET', 'POST'])
+def careerpage_search_button():
+    
+    services = ('services', 'supply chain', 'global freight forwarding', 'freight forwarding', 'internet fulfilment' )
+    logistics = ('logistics', 'deliveries', )
+    contactDetails = ('phone', 'office', 'contact', 'phone number', 'address', 'office address')
+    careers = ('shipping clerk', 'job openings', 'job opportunities', 'career', 'empowerment')
+    
+    if request.method == 'POST':
+        if request.form['query'] in services:
+            return redirect(url_for('services'))
+        elif request.form['query'] in logistics:
+            return redirect(url_for('logistics'))
+        elif request.form['query'] in contactDetails:
+            return redirect(url_for('contact'))
+        elif request.form['query'] in careers:
+            return redirect(url_for('careers'))
+        else:
+            flash('Sorry, {} is not in our dictionary.'.format(request.form['query']))
+
 @app.route('/careers')
 def careers():
     return render_template("career/careers.html")
@@ -111,6 +131,13 @@ def trackShipment():
         if request.form['shippingNumber']:
              flash('Shipping not found')
         return redirect(url_for('load_homepage'))
+    return redirect(url_for('load_homepage'))
+
+@app.route('/subscription', methods = ['GET', 'POST'])
+def newsletter_subscription():
+    if request.method == 'POST':
+        email = request.form['email'] 
+        model.save_newsletters_to_db(email)
     return redirect(url_for('load_homepage'))
 
 if __name__ == "__main__":

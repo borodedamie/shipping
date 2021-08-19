@@ -27,4 +27,12 @@ def save_application_to_db(first_name, last_name, other_names, email, address, s
     connection.commit()
     cursor.close()
     connection.close()
+
+def save_newsletters_to_db(email):
+    connection = sqlite3.connect("shipbite.db")
+    cursor = connection.cursor()
     
+    cursor.execute("INSERT INTO newsletter(email) VALUES(?)", (email,))
+    connection.commit()
+    cursor.close()
+    connection.close()

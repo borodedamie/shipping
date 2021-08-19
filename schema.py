@@ -31,6 +31,13 @@ cursor.execute(
     ); """
 )
 
+cursor.execute(
+    """ CREATE TABLE IF NOT EXISTS newsletter (
+        id INTEGER PRIMARY KEY,
+        email text
+    ); """
+)
+
 print("Tables created successfully")
 
 connection.close()

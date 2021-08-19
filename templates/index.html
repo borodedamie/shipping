@@ -94,7 +94,7 @@
       <!-- end site-menu -->
       <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
       <!-- end hamburger-menu -->
-      <div class="navbar-button"> <a href="#">GET A QUOTE</a> </div>
+      <div class="navbar-button"> <a href="#quote">GET A QUOTE</a> </div>
       <!-- end navbar-button --> 
     </div>
     <!-- end inner --> 
@@ -113,7 +113,7 @@
             Logistics</h1>
           <p>Take the complexity out of customs Freight Solutions <br>
             with customs brokerage services</p>
-          <a href="#">COURIER SERVICE</a> </div>
+          <a href="/logistics">COURIER SERVICE</a> </div>
         <!-- end container --> 
       </div>
       <!-- end swiper-slide -->
@@ -125,7 +125,7 @@
             Delivery</h1>
           <p>Take the complexity out of customs Freight Solutions <br>
             with customs brokerage services</p>
-          <a href="#">DISCOVER ALL</a> </div>
+          <a href="/services">DISCOVER ALL</a> </div>
         <!-- end container --> 
       </div>
       <!-- end swiper-slide -->
@@ -137,7 +137,7 @@
             Trustable</h1>
           <p>Take the complexity out of customs Freight Solutions <br>
             with customs brokerage services</p>
-          <a href="#">MORE ABOUT US</a> </div>
+          <a href="/about">MORE ABOUT US</a> </div>
         <!-- end container --> 
       </div>
       <!-- end swiper-slide -->
@@ -171,43 +171,56 @@
   <!-- end container --> 
 </div>
 <!-- end section-note -->
-<section class="content-section no-top-spacing">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5">
-        <figure class="video-thumb"> <img src="/static/images/video-thumb.jpg" alt="Image"> <a href="videos/video01.mp4" data-fancybox>Play Button</a> </figure>
-        <!-- end video-thumb --> 
-      </div>
-      <!-- end col-5 -->
-      <div class="col-lg-7">
-        <div class="track-shipping-form">
-          <div class="inner">
-            <h3>Track your shipment</h3>
-            <div class="form-group half">
-              <input type="radio" checked name="track">
-              Shipping number </div>
-            <!-- end form-group -->
-            <div class="form-group half">
-              <input type="radio" name="track">
-              Customer reference </div>
-            <!-- end form-group -->
-            <div class="form-group">
-              <input type="text" placeholder="Shipping Number">
-            </div>
-            <!-- end form-group -->
-			   <div class="form-group">
-            <button type="submit"><i class="lni lni-search-alt"></i> SEARCH</button>
-          </div>
-          <!-- end form-group --> 
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
+
+<section class="content-section no-top-spacing" id="track">
+  <form action="/trackShipment">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <figure class="video-thumb"> <img src="/static/images/video-thumb.jpg" alt="Image"> <a href="videos/video01.mp4" data-fancybox>Play Button</a> </figure>
+          <!-- end video-thumb --> 
         </div>
-        <!-- end inner --> 
+        <!-- end col-5 -->
+        <div class="col-lg-7">
+          <div class="track-shipping-form">
+            <div class="inner">
+              <h3>Track your shipment</h3>
+              <div class="form-group half">
+                <input type="radio" checked name="track">
+                Shipping number </div>
+              <!-- end form-group -->
+              <div class="form-group half">
+                <input type="radio" name="track">
+                Customer reference </div>
+              <!-- end form-group -->
+              <div class="form-group">
+                <input type="text" placeholder="Shipping Number" name="shippingNumber">
+              </div>
+              <!-- end form-group -->
+           <div class="form-group">
+              <button type="submit"><i class="lni lni-search-alt"></i> SEARCH</button>
+            </div>
+            <!-- end form-group --> 
+          </div>
+          <!-- end inner --> 
+        </div>
+        <!-- end track-shipping-form --> 
       </div>
-      <!-- end track-shipping-form --> 
+      <!-- end col-7 --> 
     </div>
-    <!-- end col-7 --> 
-  </div>
-  <!-- end row -->
-  </div>
+    <!-- end row -->
+    </div>
+  </form>
   <!-- end container --> 
 </section>
 <!-- end content-section -->
@@ -223,7 +236,7 @@
             based in the Midlands, United States. We specialise in providing 
             supply-chain warehousing and transport services throughout the 
             United States and Continental Europe.</p>
-          <a href="#" class="custom-button">Discover All Solutions</a> </div>
+          <a href="/services" class="custom-button">Discover All Solutions</a> </div>
         <!-- end side-content --> 
       </div>
       <!-- end col-7 -->
@@ -482,7 +495,7 @@
 
 </section> -->
 <!-- end content-section -->
-<section class="content-section no-bottom-spacing bottom-bg-half">
+<section class="content-section no-bottom-spacing bottom-bg-half" id="quote">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -494,65 +507,67 @@
         <!-- end section-title --> 
       </div>
       <!-- end col-12 -->
-      <div class="col-12">
-        <div class="calculator">
-          <div class="row inner">
-            <div class="form-group col-md-6"> <span>Distance</span>
-              <select>
-                <option>Please select</option>
-              </select>
-            </div>
-            <!-- end form-group -->
-            <div class="form-group col-md-6"> <span>Destination</span>
-              <input type="text">
-            </div>
-            <!-- end form-group -->
-            <div class="form-group col-lg-3 col-md-6"> <span>Width</span>
-              <input type="text">
-            </div>
-            <!-- end form-group -->
-            <div class="form-group col-lg-3 col-md-6"> <span>Height</span>
-              <input type="text">
-            </div>
-            <!-- end form-group -->
-            <div class="form-group col-lg-3 col-md-6"> <span>Weight</span>
-              <input type="text">
-            </div>
-            <!-- end form-group -->
-            <div class="form-group col-lg-3 col-md-6"> <span>Fragile</span>
-              <div class="yes-no" id="yes-no">
-                <input type="radio" name="rdo" id="yes" value="15000" checked />
-                <input type="radio" name="rdo" id="no" value="0" />
-                <div class="switch">
-                  <label for="yes">Yes</label>
-                  <label for="no">No</label>
-                  <span></span> </div>
+      <form action="">
+        <div class="col-12">
+          <div class="calculator">
+            <div class="row inner">
+              <div class="form-group col-md-6"> <span>Distance</span>
+                <select>
+                  <option>Please select</option>
+                </select>
               </div>
-              <!-- end yes-no --> 
+              <!-- end form-group -->
+              <div class="form-group col-md-6"> <span>Destination</span>
+                <input type="text" name="destination">
+              </div>
+              <!-- end form-group -->
+              <div class="form-group col-lg-3 col-md-6"> <span>Width</span>
+                <input type="text" name="width">
+              </div>
+              <!-- end form-group -->
+              <div class="form-group col-lg-3 col-md-6"> <span>Height</span>
+                <input type="text" name="height">
+              </div>
+              <!-- end form-group -->
+              <div class="form-group col-lg-3 col-md-6"> <span>Weight</span>
+                <input type="text" name="weight">
+              </div>
+              <!-- end form-group -->
+              <div class="form-group col-lg-3 col-md-6"> <span>Fragile</span>
+                <div class="yes-no" id="yes-no">
+                  <input type="radio" name="rdo" id="yes" value="15000" checked />
+                  <input type="radio" name="rdo" id="no" value="0" />
+                  <div class="switch">
+                    <label for="yes">Yes</label>
+                    <label for="no">No</label>
+                    <span></span> </div>
+                </div>
+                <!-- end yes-no --> 
+              </div>
+              <!-- end form-group -->
+              <div class="form-group col-12">
+                <label>
+                  <input type="checkbox" name="deliveryType" checked>
+                  Express Delivery</label>
+                <label>
+                  <input type="checkbox" name="deliveryType">
+                  Insurance</label>
+                <label>
+                  <input type="checkbox" name="deliveryType">
+                  Packaging</label>
+              </div>
+              <!-- end form-group -->
+              <div class="form-group col-12">
+                <div class="estimated-price"><b>Estimated Price :</b> <strong>{{ shippingCost }}</strong></div>
+                <!-- end estimated-price --> 
+              </div>
+              <!-- end form-group --> 
             </div>
-            <!-- end form-group -->
-            <div class="form-group col-12">
-              <label>
-                <input type="checkbox" checked>
-                Express Delivery</label>
-              <label>
-                <input type="checkbox">
-                Insurance</label>
-              <label>
-                <input type="checkbox">
-                Packaging</label>
-            </div>
-            <!-- end form-group -->
-            <div class="form-group col-12">
-              <div class="estimated-price"><b>Estimated Price :</b> <strong>$67.000</strong></div>
-              <!-- end estimated-price --> 
-            </div>
-            <!-- end form-group --> 
+            <!-- end row inner --> 
           </div>
-          <!-- end row inner --> 
+          <!-- end calculator --> 
         </div>
-        <!-- end calculator --> 
-      </div>
+      </form>
       <!-- end col-12 --> 
     </div>
     <!-- end row --> 
@@ -712,7 +727,7 @@
           <li><a href="#">Sea Freight</a></li>
           <li><a href="#">Ground Cargo</a></li>
           <li><a href="#">Packaging Options</a></li>
-          <li><a href="#">Track Your Shipment</a></li>
+          <li><a href="#track">Track Your Shipment</a></li>
         </ul>
       </div>
       <!-- end col-4 -->

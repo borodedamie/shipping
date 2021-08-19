@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 import model
 # import urllib.request
@@ -49,6 +49,20 @@ def submit_application():
 
 @app.route('/')
 def load_homepage():
+    if request.method == 'POST':
+        max_weight = 150
+        max_length = 108
+        express = 62.50
+        
+        if request.form['weight'] >= max_weight and request.form['height'] >= max_length:
+            shippingCost = express * 0.37
+        elif request.form['weight'] <= max_weight and request.form['height'] <= max_length:
+            shippingCost = 30.50 * 0.37
+        elif request.form['weight'] < 15 and request.form['height'] < 10:
+            shippingCost = 2.50 * 0.37
+            
+        return render_template("index.html", shippingCost = shippingCost)
+    
     return render_template("index.html")
 
 @app.route('/contact')
@@ -90,6 +104,14 @@ def create():
         model.save_contact_to_db(name, email, phone_no, message)
         
         return redirect(url_for('contact'))
+    
+@app.route('/trackShipment', methods = ['GET', 'POST'])
+def trackShipment():
+    if request.method == 'POST':
+        if request.form['shippingNumber']:
+             flash('Shipping not found')
+        return redirect(url_for('load_homepage'))
+    return redirect(url_for('load_homepage'))
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', port = 8000, debug = True)

@@ -26,7 +26,7 @@ cursor.execute(
         phone_no text,
         ssn text,
         position text,
-        files blob NULL,
+        files text NULL,
         reference text 
     ); """
 )

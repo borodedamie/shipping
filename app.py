@@ -16,6 +16,11 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
            
+def convertToBinary(filename):
+    with open(filename, 'rb') as file:
+        data = file.read()
+    return data
+           
 @app.route('/submit', methods = ['GET', 'POST'])
 def submit_application():
     if request.method == 'POST':
@@ -34,7 +39,7 @@ def submit_application():
         if 'files[]' not in request.files:
             return 'no file found'
         
-        images = request.files.getlist('files[]')
+        files = request.files.getlist('files[]')
         for file in files:
             if file.filename == " ":
                 print("file must have a name.")
@@ -43,9 +48,9 @@ def submit_application():
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-        # model.save_application_to_db(first_name, last_name, other_names, email, address, state, city, phone_no, ssn, position, files, reference)
+        model.save_application_to_db(first_name, last_name, other_names, email, address, state, city, phone_no, ssn, position, filename, reference)
         
-        return 'something happened at least.'
+        return 'something happened'
 
 @app.route('/')
 def load_homepage():
@@ -129,7 +134,7 @@ def create():
 def trackShipment():
     if request.method == 'POST':
         if request.form['shippingNumber']:
-             flash('Shipping not found')
+             flash('{} shipment not found'.format(request.form['shippingNumber']))
         return redirect(url_for('load_homepage'))
     return redirect(url_for('load_homepage'))
 

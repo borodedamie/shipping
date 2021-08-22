@@ -2,6 +2,17 @@
 
 {% block content %}
 
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <li>{{ message }}</li>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>  
+    {% endfor %}  
+  {% endif %}
+{% endwith %}
+
 <div class="preloader"> <img src="/static/images/preloader.png" alt="Image"> </div>
 <!-- end preloader -->
 <div class="page-transition"></div>
@@ -171,19 +182,8 @@
   <!-- end container --> 
 </div>
 <!-- end section-note -->
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
-{% block body %}{% endblock %}
 
 <section class="content-section no-top-spacing" id="track">
-  <form action="/trackShipment">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
@@ -193,25 +193,27 @@
         <!-- end col-5 -->
         <div class="col-lg-7">
           <div class="track-shipping-form">
-            <div class="inner">
-              <h3>Track your shipment</h3>
-              <div class="form-group half">
-                <input type="radio" checked name="track">
-                Shipping number </div>
-              <!-- end form-group -->
-              <div class="form-group half">
-                <input type="radio" name="track">
-                Customer reference </div>
-              <!-- end form-group -->
-              <div class="form-group">
-                <input type="text" placeholder="Shipping Number" name="shippingNumber">
+            <form action="/trackShipment" method="POST">
+              <div class="inner">
+                <h3>Track your shipment</h3>
+                <div class="form-group half">
+                  <input type="radio" checked name="track">
+                  Shipping number </div>
+                <!-- end form-group -->
+                <div class="form-group half">
+                  <input type="radio" name="track">
+                  Customer reference </div>
+                <!-- end form-group -->
+                <div class="form-group">
+                  <input type="text" placeholder="Shipping Number" name="shippingNumber">
+                </div>
+                <!-- end form-group -->
+             <div class="form-group">
+                <button type="submit"><i class="lni lni-search-alt"></i> SEARCH</button>
               </div>
-              <!-- end form-group -->
-           <div class="form-group">
-              <button type="submit"><i class="lni lni-search-alt"></i> SEARCH</button>
+              <!-- end form-group --> 
             </div>
-            <!-- end form-group --> 
-          </div>
+            </form>
           <!-- end inner --> 
         </div>
         <!-- end track-shipping-form --> 
@@ -220,7 +222,6 @@
     </div>
     <!-- end row -->
     </div>
-  </form>
   <!-- end container --> 
 </section>
 <!-- end content-section -->

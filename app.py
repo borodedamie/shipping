@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 import model
 # import urllib.request
-import os
+import os, webbrowser
 
 UPLOAD_FOLDER = '/mnt/c/Users/PC/Desktop/Shipping/static/images/upload'
 ALLOWED_EXTENSIONS = {'doc', 'docx', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
@@ -51,6 +51,12 @@ def submit_application():
         model.save_application_to_db(first_name, last_name, other_names, email, address, state, city, phone_no, ssn, position, filename, reference)
         
         return 'something happened'
+
+@app.route('/mailto', methods = ['GET', 'POST'])
+def launch_def_mailapp():    
+    webbrowser.open('mailto:', new = 1)
+    
+    return redirect(request.referrer)
 
 @app.route('/')
 def load_homepage():

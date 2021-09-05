@@ -2,7 +2,7 @@
 
 @Author: Themezinho
 @URL: http://www.themezinho.net
- 
+
 This file contains the styling for the actual theme, this
 is the file you need to edit to change the look of the
 theme.
@@ -59,7 +59,7 @@ theme.
 		47. RESPONSIVE TABLET FIXES
 		48. RESPONSIVE MOBILE FIXES
 
-	
+
 
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
@@ -83,11 +83,11 @@ img {
 /* LINKS */
 a {
   color: #212223;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
@@ -96,7 +96,7 @@ a:hover {
 }
 
 /* FORM ELEMENTS */
-input[type="text"] {
+input[type=text] {
   width: 420px;
   max-width: 100%;
   height: 80px;
@@ -104,7 +104,7 @@ input[type="text"] {
   border: 1px solid #cecece;
 }
 
-input[type="email"] {
+input[type=email] {
   width: 420px;
   max-width: 100%;
   height: 80px;
@@ -112,7 +112,7 @@ input[type="email"] {
   border: 1px solid #cecece;
 }
 
-input[type="search"] {
+input[type=search] {
   width: 420px;
   max-width: 100%;
   height: 80px;
@@ -120,7 +120,7 @@ input[type="search"] {
   border: 1px solid #cecece;
 }
 
-input[type="password"] {
+input[type=password] {
   width: 420px;
   max-width: 100%;
   height: 80px;
@@ -128,7 +128,7 @@ input[type="password"] {
   border: 1px solid #cecece;
 }
 
-input[type="radio"] {
+input[type=radio] {
   width: 18px;
   height: 18px;
   display: inline-block;
@@ -139,11 +139,11 @@ input[type="radio"] {
   border-radius: 50%;
 }
 
-input[type="radio"]:checked {
+input[type=radio]:checked {
   border: 6px solid #212223;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   width: 18px;
   height: 18px;
   display: inline-block;
@@ -153,7 +153,7 @@ input[type="checkbox"] {
   background: #ededed;
 }
 
-input[type="checkbox"]:checked {
+input[type=checkbox]:checked {
   border: 6px solid #212223;
 }
 
@@ -196,7 +196,7 @@ select:-moz-focusring {
   text-shadow: 0 0 0 #000;
 }
 
-input[type="submit"] {
+input[type=submit] {
   height: 80px;
   display: inline-block;
   font-size: 14px;
@@ -207,7 +207,7 @@ input[type="submit"] {
   padding: 0 50px;
 }
 
-button[type="submit"] {
+button[type=submit] {
   height: 80px;
   display: inline-block;
   font-size: 14px;
@@ -217,7 +217,7 @@ button[type="submit"] {
   border: none;
   padding: 0 50px;
 }
-button[type="submit"] i {
+button[type=submit] i {
   display: inline-block;
   margin-right: 8px;
   font-size: 18px;
@@ -295,11 +295,11 @@ button[type="submit"] i {
   width: 100%;
   height: 72px;
   text-align: center;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .yes-no .switch span {
   position: absolute;
@@ -309,20 +309,20 @@ button[type="submit"] i {
   left: 0;
   background: #fed300;
   font-weight: 600;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .yes-no label {
   cursor: pointer;
   line-height: 72px;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-weight: 600;
 }
 .yes-no label[for=yes] {
@@ -438,10 +438,10 @@ button[type="submit"] i {
   padding-left: 42px;
   margin-bottom: 20px;
 }
-.accordion .card [aria-expanded="true"] {
+.accordion .card [aria-expanded=true] {
   color: #212223;
 }
-.accordion .card [aria-expanded="true"]:before {
+.accordion .card [aria-expanded=true]:before {
   content: "-" !important;
   background: #212223 !important;
   color: #fff !important;
@@ -475,10 +475,10 @@ button[type="submit"] i {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .hamburger-menu span:nth-child(1) {
@@ -541,16 +541,16 @@ button[type="submit"] i {
   right: 0;
   top: 0;
   background: #fed300;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .preloader img {
   height: 50px;
   display: inline-block;
-  animation: fadeup 0.30s;
+  animation: fadeup 0.3s;
 }
 
 .page-loaded .preloader {
@@ -576,11 +576,11 @@ button[type="submit"] i {
   left: 0;
   bottom: 0;
   background: #fed300;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .page-transition.active {
   height: 100%;
@@ -886,11 +886,11 @@ button[type="submit"] i {
   display: inline-block;
   font-weight: 600;
   font-size: 14px;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .navbar .inner .custom-menu ul li a:hover {
   color: #fed300;
@@ -915,11 +915,11 @@ button[type="submit"] i {
   display: inline-block;
   font-weight: 600;
   font-size: 14px;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .navbar .inner .site-menu ul li a:hover {
   color: #fed300;
@@ -941,11 +941,11 @@ button[type="submit"] i {
   padding: 0 40px;
   font-weight: 600;
   font-size: 14px;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .navbar .inner .navbar-button a:hover {
   opacity: 0.9;
@@ -1035,10 +1035,10 @@ button[type="submit"] i {
 .slider .main-slider .controls .button-prev circle {
   stroke-dasharray: 315;
   stroke-dashoffset: 315;
-  transition: stroke-dashoffset .5s;
+  transition: stroke-dashoffset 0.5s;
 }
 .slider .main-slider .controls .button-prev svg {
-  transition: transform .3s;
+  transition: transform 0.3s;
   position: absolute;
   left: 0;
   top: 0;
@@ -1068,10 +1068,10 @@ button[type="submit"] i {
 .slider .main-slider .controls .button-next circle {
   stroke-dasharray: 315;
   stroke-dashoffset: 315;
-  transition: stroke-dashoffset .5s;
+  transition: stroke-dashoffset 0.5s;
 }
 .slider .main-slider .controls .button-next svg {
-  transition: transform .3s;
+  transition: transform 0.3s;
   position: absolute;
   left: 0;
   top: 0;
@@ -1222,14 +1222,14 @@ button[type="submit"] i {
   font-size: 14px;
   font-weight: 600;
   padding: 0 50px;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .custom-button:hover {
-  opacity: 0.90;
+  opacity: 0.9;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -1260,11 +1260,11 @@ button[type="submit"] i {
 .video-thumb img {
   width: 100%;
   display: block;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .video-thumb a {
   width: 0;
@@ -1277,11 +1277,11 @@ button[type="submit"] i {
   bottom: 50px;
   float: left;
   text-indent: -99999px;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .video-thumb a:hover {
   border-color: transparent transparent transparent #fed300;
@@ -1330,7 +1330,7 @@ button[type="submit"] i {
   font-weight: 800;
   margin-bottom: 30px;
 }
-.track-shipping-form .inner input[type="text"] {
+.track-shipping-form .inner input[type=text] {
   border: none;
   width: 100%;
   margin-top: 5px;
@@ -1527,11 +1527,11 @@ button[type="submit"] i {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid #cecece;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: relative;
 }
 .icon-box:before {
@@ -1545,11 +1545,11 @@ button[type="submit"] i {
   background-size: auto 11px;
   z-index: -1;
   opacity: 0;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .icon-box .inner {
   width: 100%;
@@ -1635,11 +1635,11 @@ button[type="submit"] i {
   width: 100%;
   float: left;
   opacity: 0.6;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .solution-box figure figcaption {
   width: 100%;
@@ -1652,11 +1652,11 @@ button[type="submit"] i {
   padding: 30px;
 }
 .solution-box figure figcaption * {
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .solution-box figure figcaption small {
   width: 100%;
@@ -1751,11 +1751,11 @@ button[type="submit"] i {
   padding-left: 40px;
   background: #212223;
   color: #fff;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .side-services ul li a:hover {
   text-decoration: none;
@@ -1774,11 +1774,11 @@ button[type="submit"] i {
   position: relative;
   padding-left: 10px;
   opacity: 0;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .side-services ul li a i:after {
   content: "";
@@ -1924,11 +1924,11 @@ button[type="submit"] i {
   border: 1px solid #cecece;
   margin-top: 30px;
   position: relative;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .service-box:before {
   content: "";
@@ -1941,11 +1941,11 @@ button[type="submit"] i {
   background-size: auto 11px;
   z-index: -1;
   opacity: 0;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .service-box .inner {
   width: 100%;
@@ -2061,7 +2061,7 @@ button[type="submit"] i {
   display: inline-block;
   margin-right: 30px;
 }
-.calculator input[type="text"] {
+.calculator input[type=text] {
   width: 100%;
 }
 .calculator select {
@@ -2426,11 +2426,11 @@ button[type="submit"] i {
   text-align: center;
   margin-top: 50px;
   position: relative;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 1;
 }
 .team-member:before {
@@ -2444,11 +2444,11 @@ button[type="submit"] i {
   background-size: auto 11px;
   z-index: -1;
   opacity: 0;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .team-member .inner {
   width: 100%;
@@ -2514,11 +2514,11 @@ button[type="submit"] i {
 .logo-item img {
   width: 100%;
   display: block;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .logo-item:hover img {
   opacity: 0.4;
@@ -2535,11 +2535,11 @@ button[type="submit"] i {
   background: #fed300;
 }
 .gallery-item * {
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .gallery-item img {
   width: 100%;
@@ -2547,21 +2547,21 @@ button[type="submit"] i {
 }
 .gallery-item:before {
   content: "\eb7b";
-  font-family: 'LineIcons';
+  font-family: "LineIcons";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   font-size: 24px;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   opacity: 0;
 }
 .gallery-item:hover img {
-  opacity: 0.10;
+  opacity: 0.1;
   transform: scale(1.05);
 }
 .gallery-item:hover:before {
@@ -2703,11 +2703,11 @@ button[type="submit"] i {
 .news-box .content h3 a {
   display: block;
   color: #212223;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .30s ease-in-out;
-  -ms-transition: all .30s ease-in-out;
-  -o-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .news-box .content h3 a:hover {
   color: #fed300;
@@ -2799,7 +2799,7 @@ button[type="submit"] i {
   width: 100%;
   display: block;
 }
-.sidebar .widget form input[type="submit"] {
+.sidebar .widget form input[type=submit] {
   margin-top: 10px;
   background: #212223;
   color: #fff;
@@ -2903,10 +2903,10 @@ button[type="submit"] i {
 .contact-form .form-group:last-child {
   margin-bottom: 0;
 }
-.contact-form input[type="text"] {
+.contact-form input[type=text] {
   width: 100%;
 }
-.contact-form input[type="submit"] {
+.contact-form input[type=submit] {
   background: #fed300;
   color: #212223;
 }
@@ -2990,13 +2990,13 @@ button[type="submit"] i {
   width: 100%;
   display: block;
 }
-.footer form input[type="email"] {
+.footer form input[type=email] {
   width: 100%;
   display: block;
   margin-bottom: 10px;
   border: none;
 }
-.footer form input[type="submit"] {
+.footer form input[type=submit] {
   background: #fed300;
   color: #212223;
 }
@@ -3506,3 +3506,5 @@ button[type="submit"] i {
     margin-left: 0;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

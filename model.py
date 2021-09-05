@@ -4,7 +4,7 @@ def save_contact_to_db(name, email, phone_no, message):
     connection = sqlite3.connect("shipbite.db")
     cursor = connection.cursor()
     
-    cursor.execute(" INSERT INTO contacts(name, email, phone_no, message)VALUES()", ( name, email, phone_no, message ))
+    cursor.execute(" INSERT INTO contacts(name, email, phone_no, message)VALUES(?, ?, ?, ?)", ( name, email, phone_no, message ))
  
     connection.commit()
     cursor.close()

@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
+{% block head %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#fed300"/>
-<title>Shipbite | Logicstic Shipping Company</title>
+<title>{% block title %} Shipbite | Logistics Shipping Company {% endblock %}</title>
 <meta name="author" content="Themezinho">
 <meta name="description" content="For all kind of delivery and shipping company website">
 <meta name="keywords" content="logistic, shipping, cargo, delivery, transportation, truck, service, solutions, importing, exporting, trade, product, move, calculate, cost, ecommerce">
@@ -41,13 +42,114 @@
 <link rel="stylesheet" href="/static/css/style.css">
 
 <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+{% endblock head %}
 </head>
 <body>
+<div class="preloader"> <img src="/static/images/preloader.png" alt="Image"> </div>
+<!-- end preloader -->
+<div class="page-transition"></div>
+<!-- end page-transition -->	
+<aside class="side-widget">
+  <div class="inner">
+    <div class="logo"> <a href="/"><img src="/static/images/logo.png" srcset="/static/images/logo@2x.png" alt="Image"></a> </div>
+    <!-- end logo -->
+    <div class="hide-mobile">
+      <p>Take the complexity out of customs Freight Solutions with customs brokerage services</p>
+      <figure class="gallery"><a href="/static/images/recent-news01.jpg" data-fancybox><img src="/static/images/recent-news01.jpg" alt="Image"></a><a href="/images/recent-news02.jpg" data-fancybox><img src="images/recent-news02.jpg" alt="Image"></a></figure>
+      <h6 class="widget-title">CONTACT INFO</h6>
+      <address class="address">
+      <p>+1 (424) 900-4259<br>
+        <a href="{{ url_for('launch_def_mailapp') }}">sales@shipbite.com</a></p>
+      </address>
+      <h6 class="widget-title">FOLLOW US</h6>
+      <ul class="social-media">
+        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+        <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
+        <li><a href="#"><i class="lni lni-instagram"></i></a></li>
+        <li><a href="#"><i class="lni lni-youtube"></i></a></li>
+        <li><a href="#"><i class="lni lni-pinterest"></i></a></li>
+      </ul>
+    </div>
+    <!-- end hide-mobile -->
+    <div class="show-mobile">
+      <div class="custom-menu">
+        <ul>
+          <li><a href="{{ url_for('load_homepage') }}">En</a></li>
+          <li><a href="#">Ru</a></li>
+        </ul>
+      </div>
+      <!-- end custom-menu -->
+      <div class="site-menu">
+        <ul>
+          <li><a href="/logistics">Logistics</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- end site-menu --> 
+    </div>
+    <!-- end show-mobile --> 
+    <small>© 2020 Shipbite | Logicstic Shipping Company</small> </div>
+  <!-- end inner --> 
+</aside>
+<!-- end side-widget -->
+<div class="topbar">
+  <div class="container">
+    <div class="phone">Call Us Now: <a href="#"> +1 (424) 900-4259 </a></div>
+    <!-- end phone -->
+    <div class="email"> Email: <a href="{{ url_for('launch_def_mailapp') }}">sales@shipbite.com</a> </div>
+    <!-- end email -->
+    <div class="social-media"> <span>Follow us</span>
+      <ul>
+        <li><a href="#"><i class="lni lni-facebook-filled"></i> <span>Facebook</span></a></li>
+        <li><a href="#"><i class="lni lni-twitter-original"></i> <span>Twitter</span></a></li>
+        <li><a href="#"><i class="lni lni-linkedin-original"></i> <span>Linkedin</span></a></li>
+      </ul>
+    </div>
+	  <!-- end social-media -->
+  </div>
+  <!-- end container --> 
+</div>
+<!-- end topbar -->
+<nav class="navbar">
+  <div class="container">
+    <div class="inner">
+      <div class="logo"> <a href="{{ url_for('load_homepage') }}"> <img src="/static/images/logo.png" srcset="/static/images/logo@2x.png" alt="Image"> </a> </div>
+      <!-- end logo -->
+      <div class="custom-menu">
+        <ul>
+          <li><a href="{{ url_for('load_homepage') }}">En</a></li>
+          <li><a href="#">Ru</a></li>
+        </ul>
+      </div>
+      <!-- end custom-menu -->
+      <div class="site-menu">
+        <ul>
+          <li><a href="/logistics">Logistics</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- end site-menu -->
+      <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
+      <!-- end hamburger-menu -->
+      <div class="navbar-button"> <a href="#quote">GET A QUOTE</a> </div>
+      <!-- end navbar-button --> 
+    </div>
+    <!-- end inner --> 
+  </div>
+  <!-- end container --> 
+</nav>
+<!-- end navbar -->
     <div id="content">
         {% block content %}
 
         {% endblock %}
     </div>
-</body>
+
 </body>
 </html>

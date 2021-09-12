@@ -71,12 +71,12 @@ us using this form
       </div>
       <!-- end col-12 -->
 		
-      <form action="/create" method="POST">
+      <form action="{{ url_for('create') }}" method="POST">
         <div class="col-12">
           <div class="contact-form">
             <div class="row inner">
               <div class="form-group col-lg-4">
-            <input type="text" placeholder="Complate Name" name="name">
+            <input type="text" placeholder="Complete Name" name="name">
             </div> 
             <!-- end form-group -->
               <div class="form-group col-lg-4 col-md-6">

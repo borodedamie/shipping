@@ -5,7 +5,7 @@
         <div class="col-lg-4 col-md-6">
           <figure class="logo"> <img src="/static/images/logo.png" srcset="/static/images/logo@2x.png" alt="Image"> </figure>
           <p>+1 (424) 900-4259<br>
-            <a href="/mailto">sales@shipbite.com</a></p>
+            <a href="{{ url_for('launch_def_mailapp') }}">sales@shipbite.com</a></p>
           <p>2075 Brandon Trail Alpharetta, <br>
             London - UK</p>
         </div>
@@ -23,14 +23,14 @@
         <!-- end col-4 -->
         <div class="col-lg-4">
           <h6 class="widget-title">Subscribe Newsletter</h6>
-          <form>
-            <input type="email" placeholder="enter your email address....">
+          <form action="/subscription" method="POST">
+            <input type="email" name="email" placeholder="enter your email address....">
             <input type="submit" value="Subscribe">
           </form>
         </div>
         <!-- end col-4 -->
         <div class="col-12">
-          <div class="footer-bottom"> <span>© 2020 Shipbite | Logicstic Shipping Company</span> <span>Site created by <a href="#">Themezinho</a></span> </div>
+          <div class="footer-bottom"> <span>© 2021 Shipbite | Logicstic Shipping Company</span> <span>Site created by <a href="#">B3VST</a></span> </div>
           <!-- end footer-bottom --> 
         </div>
         <!-- end col-12 --> 

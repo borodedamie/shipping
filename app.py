@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 import model
+# from new_model import *
 # import urllib.request
 import os, webbrowser
 
@@ -9,6 +10,14 @@ ALLOWED_EXTENSIONS = {'doc', 'docx', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
 app.secret_key = "aswdqwe232343refeerheretti"
+
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///shipbite.db'
+# app.config["SQLALCHEMY_TRACK_NOTIFICATIONS"] = False
+
+# @app.before_first_request
+# def create_tables():
+#     db.create_all()
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
@@ -24,17 +33,17 @@ def convertToBinary(filename):
 @app.route('/submit', methods = ['GET', 'POST'])
 def submit_application():
     if request.method == 'POST':
-        first_name = request.form['first_name']
-        last_name = request.form['last_name']
-        other_names = request.form['other_names']
-        email = request.form['email']
-        address = request.form['address']
-        state = request.form['state']
-        city = request.form['city']
-        phone_no = request.form['phone_no']
-        ssn = request.form['ssn']
-        position = request.form['position']
-        reference = request.form['reference']
+        first_name = request.form.get('first_name')
+        last_name = request.form.get('last_name')
+        other_names = request.form.get('other_names')
+        email = request.form.get('email')
+        address = request.form.get('address')
+        state = request.form.get('state')
+        city = request.form.get('city')
+        phone_no = request.form.get('phone_no')
+        ssn = request.form.get('ssn')
+        position = request.form.get('position')
+        reference = request.form.get('reference')
         
         if 'files[]' not in request.files:
             return 'no file found'
@@ -47,7 +56,7 @@ def submit_application():
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-
+        
         model.save_application_to_db(first_name, last_name, other_names, email, address, state, city, phone_no, ssn, position, filename, reference)
         
         return 'something happened'
@@ -127,10 +136,10 @@ def application():
 @app.route('/create', methods = ['GET', 'POST'])
 def create():
     if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        phone_no = request.form['phone_no']
-        message = request.form['message']
+        name = request.form.get('name')
+        email = request.form.get('email')
+        phone_no = request.form.get('phone_no')
+        message = request.form.get('message')
         
         model.save_contact_to_db(name, email, phone_no, message)
         
@@ -147,9 +156,10 @@ def trackShipment():
 @app.route('/subscription', methods = ['GET', 'POST'])
 def newsletter_subscription():
     if request.method == 'POST':
-        email = request.form['email'] 
+        email = request.form.get('email')
         model.save_newsletters_to_db(email)
     return redirect(url_for('load_homepage'))
 
 if __name__ == "__main__":
+    # db.init_app(app)
     app.run(host = '0.0.0.0', port = 8000, debug = True)

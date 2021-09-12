@@ -24,7 +24,7 @@ def save_newsletters_to_db(email):
     connection = sqlite3.connect("shipbite.db")
     cursor = connection.cursor()
     
-    cursor.execute("INSERT INTO newsletter(email) VALUES(?)", (email,))
+    cursor.execute("INSERT INTO newsletters(email) VALUES(?)", (email,))
     connection.commit()
     cursor.close()
     connection.close()

@@ -32,7 +32,7 @@ cursor.execute(
 )
 
 cursor.execute(
-    """ CREATE TABLE IF NOT EXISTS newsletter (
+    """ CREATE TABLE IF NOT EXISTS newsletters (
         id INTEGER PRIMARY KEY,
         email text
     ); """

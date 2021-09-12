@@ -27,11 +27,11 @@
 <meta name="twitter:image" content="http://www.themezinho.net/qesco/preview.png">
 
 <!-- FAVICON FILES -->
-<link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
-<link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
-<link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
-<link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
-<link href="ico/favicon.png" rel="shortcut icon">
+<link href="/static/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/static/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/static/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/static/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
+<link href="/static/ico/favicon.png" rel="shortcut icon">
 
 <!-- CSS FILES -->
 <link rel="stylesheet" href="/static/css/lineicons.css">
@@ -51,7 +51,7 @@
 <!-- end page-transition -->	
 <aside class="side-widget">
   <div class="inner">
-    <div class="logo"> <a href="/"><img src="/static/images/logo.png" srcset="/static/images/logo@2x.png" alt="Image"></a> </div>
+    <div class="logo"> <a href="{{ url_for('load_homepage') }}"><img src="/static/images/logo.png" srcset="/static/images/logo@2x.png" alt="Image"></a> </div>
     <!-- end logo -->
     <div class="hide-mobile">
       <p>Take the complexity out of customs Freight Solutions with customs brokerage services</p>
@@ -81,11 +81,11 @@
       <!-- end custom-menu -->
       <div class="site-menu">
         <ul>
-          <li><a href="/logistics">Logistics</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/careers">Careers</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="{{ url_for('logistics') }}">Logistics</a></li>
+          <li><a href="{{ url_for('services') }}">Services</a></li>
+          <li><a href="{{ url_for('careers') }}">Careers</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
         </ul>
       </div>
       <!-- end site-menu --> 
@@ -127,11 +127,11 @@
       <!-- end custom-menu -->
       <div class="site-menu">
         <ul>
-          <li><a href="/logistics">Logistics</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/careers">Careers</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="{{ url_for('logistics') }}">Logistics</a></li>
+          <li><a href="{{ url_for('services') }}">Services</a></li>
+          <li><a href="{{ url_for('careers') }}">Careers</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
         </ul>
       </div>
       <!-- end site-menu -->

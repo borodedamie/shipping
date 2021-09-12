@@ -15,7 +15,7 @@
     <div class="content">
         <h3><a href="#">Job Application Form </a></h3>
         <br>
-        <form action="/submit" method="POST" enctype="multipart/form-data" class="col-12">
+        <form action="{{ url_for('submit_application') }}" method="POST" enctype="multipart/form-data" class="col-12">
             <div class="col-12">
                 <div class="calculator">
                   <div class="row inner">

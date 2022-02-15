@@ -5,7 +5,7 @@ import model
 # import urllib.request
 import os, webbrowser
 
-UPLOAD_FOLDER = '/mnt/c/Users/PC/Desktop/Shipping/static/images/upload'
+UPLOAD_FOLDER = os.getcwd() + '/static/images/upload'
 ALLOWED_EXTENSIONS = {'doc', 'docx', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
